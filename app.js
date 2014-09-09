@@ -4,6 +4,11 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+//Utilities
+var _ = require('lodash');
+var r = require('request');
+var twilio = require('twilio');
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
