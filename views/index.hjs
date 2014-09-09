@@ -2,10 +2,17 @@
 <html>
   <head>
     <title>{{ title }}</title>
+    <!--Adding Bootstrap-->
+    <link rel="stylesheet" href="public/libs/twitter/dist/css/bootstrap-theme.css">
+    <script src="public/libs/jquery/dist/jquery.min.js"></script>
+    <script src="public/libs/twitter/dist/js/bootstrap.min.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <h1>{{ title }}</h1>
     <p>Welcome to {{ title }}</p>
+    <div id="schools">
+      
+    </div>
   </body>
 </html>

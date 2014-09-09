@@ -7,6 +7,7 @@ install
 ```
 git clone URLtoREPO
 npm install
+bower install
 npm start
 ```
 
@@ -53,7 +54,7 @@ ALERT
 
 
 Data feed here found. **CANT TRUST** data feeds inconsistent with each other.
-MUST VISUALY CHECK.. 
+MUST VISUALY CHECK..
 ---
 http://cache.ltvcms.com/wtkr/closings/weather_closings_for_web.html
 http://wx.wavy.com/weather/WAVY_closings_delays.html
