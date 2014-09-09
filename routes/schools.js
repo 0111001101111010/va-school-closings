@@ -1,5 +1,16 @@
 var express = require('express');
 var router = express.Router();
+//var connect = require('../data/connect.js');
+//Database
+
+
+var ms = require('mongoskin');
+var mongoUri = process.env.MONGOLAB_URI ||
+  process.env.MONGOHQ_URL ||
+  'mongodb://localhost:27017/closings';
+var db = ms.db(mongoUri);
+var data = require('../data/schools.json');
+
 
 /*
 Location Object:
@@ -18,16 +29,14 @@ var Location = function (obj) {
   };
 };
 
-db.collection('scorpion').find().toArray(function(err, result) {
-    if (err) throw err;
-    console.log(result);
-    reply(result);
-});
-
 /* GET users listing. */
 router.get('/', function(req, res) {
+  db.collection('schools').find().toArray(function(err, result) {
+      if (err) throw err;
+      console.log(result);
 
-  res.send(data);
+      return res.send(data);
+  });
 });
 
 module.exports = router;
