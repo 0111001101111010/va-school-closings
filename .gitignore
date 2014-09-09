@@ -1,1 +1,3 @@
 /node_modules
+#bower modules
+public/libs

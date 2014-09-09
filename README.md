@@ -2,6 +2,13 @@ hrva_closing
 ----
 Alert you of changed status to school closing/opening
 
+install
+---
+```
+git clone URLtoREPO
+npm install
+npm start
+```
 
 Features
 ---
@@ -44,10 +51,26 @@ Routes
 ALERT
 / SEND EVERYONE SOMETHING SCHOOL
 
+
 Data feed here found. **CANT TRUST** data feeds inconsistent with each other.
+MUST VISUALY CHECK.. 
 ---
 http://cache.ltvcms.com/wtkr/closings/weather_closings_for_web.html
 http://wx.wavy.com/weather/WAVY_closings_delays.html
+
+APPROACH
+---
+- DONT SCRAPE DATA SUCKS.
+- ADD ALL GENERAL INTERFACE FROM DATA
+- CLASSIFY DIVISION OF SCHOOLS (BY VIEWING AREA OR ALPHABET MAYBE ONES CLOSED)
+- PUT ON INTERNET | HOOK UP TWILIO
+
+
+FEATURE CREEP
+---
+- PETITION SCHOOL TO CLOSE
+- SHOW STORIES
+- CONTACT ETC
 
 LICENSE
 ---
