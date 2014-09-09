@@ -5,7 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var db = require('./data/connect.js');
+//Database
+var ms = require('mongoskin');
+var mongoUri = process.env.MONGOLAB_URI ||
+  process.env.MONGOHQ_URL ||
+  'mongodb://localhost:27017/closings';
+var db = ms.db(mongoUri);
+var data = require('./data/schools.json');
 //Utilities
 var _ = require('lodash');
 var r = require('request');
