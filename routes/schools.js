@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 //var connect = require('../data/connect.js');
 //Database
+var _ = require('lodash');
 
 
 var ms = require('mongoskin');
@@ -35,6 +36,9 @@ router.get('/', function(req, res) {
       if (err) throw err;
       console.log(result);
 
+      _.each(data, function (data) {
+        console.log(data);
+      });
       return res.send(data);
   });
 });
