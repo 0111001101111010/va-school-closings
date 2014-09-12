@@ -8,7 +8,7 @@ var _ = require('lodash');
 var ms = require('mongoskin');
 var mongoUri = process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
-  'mongodb://localhost:27017/closings';
+  'mongodb://localhost:27017/schools';
 var db = ms.db(mongoUri);
 var data = require('../data/schools.json');
 
@@ -21,9 +21,9 @@ Location Object:
 @param email - text list
 */
 
-var Location = function (obj) {
+var School = function (school) {
   return {
-    "school": {},
+    "place": school,
     "status": 2,
     "phone": [],
     "email": []
@@ -31,16 +31,26 @@ var Location = function (obj) {
 };
 
 /* GET users listing. */
-router.get('/', function(req, res) {
-  db.collection('schools').find().toArray(function(err, result) {
-      if (err) throw err;
-      console.log(result);
-
-      _.each(data, function (data) {
-        console.log(data);
-      });
-      return res.send(data);
+router.get('/schools', function(req, res) {
+  db.collection('schools').ensureIndex({"place": 1}, {unique: true},function(err) {
+      if (err){
+        console.log(err);
+      }
   });
+  // add each school once
+  _.each(data, function (school){
+    //create school
+    var place = new School(school);
+    db.collection('schools').insert(place, function(err, result) {
+          if (err) {
+            throw err;
+          }
+          if (result) {
+            console.log(place);
+          }
+        });
+  });
+  res.send("all good");
 });
 
 module.exports = router;

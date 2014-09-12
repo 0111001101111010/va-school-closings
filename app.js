@@ -13,6 +13,7 @@ var twilio = require('twilio');
 
 var routes = require('./routes/index');
 var schools = require('./routes/schools');
+var foo = require('./routes/foo');
 
 var app = express();
 
@@ -27,8 +28,11 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+//dunno feel nuts
 app.use('/', routes);
-app.use('/schools', schools);
+app.get('/schools', schools);
+app.get('/foo', foo);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
