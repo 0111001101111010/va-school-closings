@@ -1,19 +1,8 @@
 {
-  "name": "hrva_closing",
+  "name": "xtuple-contacts",
   "version": "0.0.0",
-  "authors": [
-    "stanley zheng <dev.stanzheng@gmail.com>"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "libs",
-    "test",
-    "tests"
-  ],
   "dependencies": {
-    "twitter": "~3.2.0"
+    "bootstrap": "3.2.x",
+    "jquery": "2.1.x"
   }
 }
