@@ -59,19 +59,19 @@ MUST VISUALY CHECK..
 http://cache.ltvcms.com/wtkr/closings/weather_closings_for_web.html
 http://wx.wavy.com/weather/WAVY_closings_delays.html
 
-APPROACH
+Approach 
 ---
-- DONT SCRAPE DATA SUCKS.
-- ADD ALL GENERAL INTERFACE FROM DATA
-- CLASSIFY DIVISION OF SCHOOLS (BY VIEWING AREA OR ALPHABET MAYBE ONES CLOSED)
-- PUT ON INTERNET | HOOK UP TWILIO
+- don't scrape data
+- general data 
+- Classify schools by divisions 
+- allow email/smssubscription 
 
 
-FEATURE CREEP
+Ideas down the line 
 ---
-- PETITION SCHOOL TO CLOSE
-- SHOW STORIES
-- CONTACT ETC
+- Petition schools to close
+- show stories 
+- contact schools
 
 LICENSE
 ---
